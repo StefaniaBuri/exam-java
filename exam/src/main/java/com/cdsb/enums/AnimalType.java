@@ -2,7 +2,7 @@ package com.cdsb.enums;
 
 public enum AnimalType {
     MAMMALS("Mamíferos"),
-    BIRDS("aves"),
+    BIRDS("Aves"),
     REPTILES("Reptiles"),
     AQUATIC_ANIMALS("Animales Acuáticos");
 

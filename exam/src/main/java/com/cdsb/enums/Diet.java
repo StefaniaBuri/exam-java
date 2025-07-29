@@ -4,7 +4,7 @@ public enum Diet {
 
     HERBIVORE("Herbívoro"),
     CARNIVORE("Carnívoro"),
-    OMNIVORE("omnivore");
+    OMNIVORE("Omnívoro");
 
     String name;
 
