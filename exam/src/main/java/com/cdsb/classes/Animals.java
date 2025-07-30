@@ -83,8 +83,17 @@ public abstract class Animals implements IAnimals {
 
     @Override
     public String toString() {
-        return "Animal [name=" + name + ", species=" + species + ", animalType=" + animalType + ", habitatType="
-                + habitatType + ", dietType=" + dietType + ", requiredSpace=" + requiredSpace + ", behaviorType="
-                + behaviorType + ", needVeterinaryCare=" + needVeterinaryCare + ", canCoexist=" + canCoexist + "]";
+        StringBuffer sb = new StringBuffer();
+        sb.append("Animal [ " + "\n");
+        sb.append("Name: " + name + "\n") ;
+        sb.append("AnimalType: " + animalType + "\n");
+        sb.append("HabitatType: " + habitatType + "\n");
+        sb.append("DietType: " + dietType + "\n");
+        sb.append("BehaviorType: " + behaviorType + "\n");
+        sb.append("RequiredSpace: " + requiredSpace + "\n");
+        sb.append("NeedVeterinaryCare: " + needVeterinaryCare + "\n");
+        sb.append("CanCoexist: " + canCoexist);
+        sb.append(" ]");
+        return sb.toString();
     }
 }
