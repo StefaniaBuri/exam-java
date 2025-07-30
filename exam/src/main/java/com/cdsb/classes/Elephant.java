@@ -17,7 +17,7 @@ public class Elephant extends Animals{
     public boolean isCompatibleWith(IAnimals animals) {
         return this.getHabitatType() == animals.getHabitatType()
             && this.getBehaviorType() == animals.getBehaviorType()
-            && (animals.getSpecies().equals("Zebra") || animals.getSpecies().equals("Elefante"));
+            && animals.getSpecies().equals("Elefante") || animals.getSpecies().equals("Zebra");
     }
 
     @Override
