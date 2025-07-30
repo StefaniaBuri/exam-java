@@ -4,7 +4,7 @@ public enum AnimalType {
     MAMMALS("Mamíferos"),
     BIRDS("Aves"),
     REPTILES("Reptiles"),
-    AQUATIC_ANIMALS("Animales Acuáticos");
+    AQUATICS("Animales Acuáticos");
 
     String name;
 
