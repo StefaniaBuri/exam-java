@@ -20,16 +20,19 @@ public class Habitat implements IHabitat{
     }
 
     //GETTERS
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     public HabitatType getHabitatType() {
         return habitatType;
     }
 
     //METHODS
 
+    @Override
     public void addAnimal(IAnimals specie) {
         //compruebo la compatibilidad entre animales y si el habitat es el mismo.
         boolean isCompatible = true;
@@ -50,6 +53,12 @@ public class Habitat implements IHabitat{
         }
     }
 
+    @Override
+    public void removeAnimal(IAnimals animal) {
+        animals.remove(animal);
+    }
+
+    @Override
     public void showAnimals() { // mostramos los animales que viven en un habitat
         System.out.print("Animales en el habitat %s: ".formatted(name));
         for (IAnimals animal : animals) {
@@ -65,11 +74,6 @@ public class Habitat implements IHabitat{
         sb.append(" HabitatType: " + habitatType);
         sb.append(" ]");
         return sb.toString();
-    }
-
-    @Override
-    public void removeAnimal(IAnimals animal) {
-        animals.remove(animal);
     }
 
 }
