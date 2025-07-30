@@ -1,21 +1,34 @@
 package com.cdsb.interfaces;
 
-import com.cdsb.enums.HabitatType;
+import com.cdsb.enums.AnimalType;
+import com.cdsb.enums.BehaviorType;
 import com.cdsb.enums.Diet;
+import com.cdsb.enums.HabitatType;
 
 public interface IAnimals {
 
-    // Getters
+    // GETTERS
     String getName();
+
     String getSpecies();
+
+    AnimalType getAnimalType();
+
     HabitatType getHabitatType();
-    double getRequiredSpace(); // en m2
+
+    Diet getDietType();
+
+    int getRequiredSpace();
+
+    BehaviorType getBehaviorType();
+
+    String getVeterinaryCare();
 
 
-    // Lógica de negocio
-    Diet getDiet();
+    // LÓGICA DE NEGOCIO
     boolean isCompatibleWith(IAnimals animals);
-    boolean needVeterinaryCare();
 
+    boolean canLiveTogether();// puede convivir mismo habitat?
 
+    String makeSound(); // funcionalidad extra
 }
