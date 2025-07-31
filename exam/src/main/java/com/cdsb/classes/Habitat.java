@@ -39,7 +39,7 @@ public class Habitat implements IHabitat{
 
         //recorremos la lista de animales para ver si un nuevo animal es compatible con los animales existentes, no compatible no lo añadimos
         for (IAnimals actual : animals) {
-            if (!actual.isCompatibleWith(specie) || !specie.isCompatibleWith(actual)) {
+            if (!actual.isCompatibleWith(specie)) {
                 isCompatible = false; // devolvemos esto si no son compatibles
                 break;
             }
