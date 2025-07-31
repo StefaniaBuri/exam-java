@@ -21,6 +21,6 @@ public class Snake extends Animals{
 
     @Override
     public String makeSound() {
-        return "Hisssss...";
+        return "¡Sssss!";
     }
 }

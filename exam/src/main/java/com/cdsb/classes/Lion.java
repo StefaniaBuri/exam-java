@@ -15,14 +15,12 @@ public class Lion extends Animals{
 
     @Override
     public boolean isCompatibleWith(IAnimals animals) {
-        // compatible con animales del mismo habitat y comportamiento, no con elefante o cebra
-        return this.getHabitatType() == animals.getHabitatType()
-            && this.getBehaviorType() == animals.getBehaviorType()
-            && (animals.getSpecies().equals("León"));
+        // compatible solo con otro León.
+        return animals.getSpecies().equals("León");
     }
 
     @Override
     public String makeSound() {
-        return "Roarrr!";
+        return "¡Grrr!";
     }
 }

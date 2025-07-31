@@ -21,6 +21,6 @@ public class Iguana extends Animals{
 
     @Override
     public String makeSound() {
-        return "Click-click!";
+        return "No make sounds";
     }
 }

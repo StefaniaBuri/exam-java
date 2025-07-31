@@ -14,14 +14,13 @@ public class Parrot extends Animals{
     }
 
     @Override
-    public boolean isCompatibleWith(IAnimals animals) {
-        return this.getHabitatType() == animals.getHabitatType()
-            && this.getBehaviorType() == animals.getBehaviorType()
-            && (animals.getSpecies().equals("Loro") || animals.getSpecies().equals("Tucan"));
+    public boolean isCompatibleWith(IAnimals animal) {
+        return animal.getHabitatType() == HabitatType.TERRARIUM
+            && animal.getBehaviorType() == BehaviorType.SOCIAL;
     }
 
     @Override
     public String makeSound() {
-        return "Squawk!";
+        return "trua trua!";
     }
 }

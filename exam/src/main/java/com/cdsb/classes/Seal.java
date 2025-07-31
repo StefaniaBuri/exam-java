@@ -15,14 +15,14 @@ public class Seal extends Animals{
     }
 
     @Override
-    public boolean isCompatibleWith(IAnimals animals) {
-        return this.getHabitatType() == animals.getHabitatType()
-            && animals.canLiveTogether()
-            && (animals.getSpecies().equals("Delfín") || animals.getSpecies().equals("Foca"));
+    public boolean isCompatibleWith(IAnimals animal) {
+        return animal.getHabitatType() == HabitatType.AQUATIC
+            && animal.canLiveTogether()
+            && animal.getBehaviorType() == BehaviorType.SOCIAL;
     }
 
     @Override
     public String makeSound() {
-        return "Arf! Arf!";
+        return "oh-oh-oh!";
     }
 }

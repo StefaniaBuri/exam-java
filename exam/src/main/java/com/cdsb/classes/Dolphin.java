@@ -15,14 +15,15 @@ public class Dolphin extends Animals{
     }
 
     @Override
-    public boolean isCompatibleWith(IAnimals animals) {
-        return this.getHabitatType() == animals.getHabitatType()
-            && animals.canLiveTogether()
-            && (animals.getSpecies().equals("Foca") || animals.getSpecies().equals("Delfín"));
+    public boolean isCompatibleWith(IAnimals animal) {
+        return animal.getHabitatType() == HabitatType.AQUATIC
+            && animal.canLiveTogether()
+            && animal.getBehaviorType() == BehaviorType.SOCIAL;
+
     }
 
     @Override
     public String makeSound() {
-        return "Ee-ee-ee!";
+        return "Eeeeee!";
     }
 }
